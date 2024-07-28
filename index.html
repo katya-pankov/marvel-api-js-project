@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dfd354575f.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="script.js" defer></script>
+    <title>Marvel API - JS Project</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo"><a href="/"><img src="images/marvel-logo.png" alt="Marvel Logo"></a></div>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="nav-link" href="/">Characters</a>
+                    </li>
+                    <li>
+                        <a class='nav-link' href='comics.html'>Comics</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Character results -->
+    <section id="results-wrapper" class="container">
+        <h1>Marvel Characters</h1>
+        <div id="spinner" class="spinner">
+            <img src="images/marvel-logo.png" alt="Marvel Logo" class="spinner-logo">
+            <div class="spinner-inner"></div>
+            <p>Loading...</p>
+        </div>
+
+
+        <div id="characters" class="grid">
+        </div>
+        <div class="pagination">
+            <button id="prev-page">Previous</button>
+            <button id="next-page">Next</button>
+        </div>
+    </section>
+
+    <!-- Error message -->
+    <div id="error-message">
+    </div>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div>
+                <p>Powered by <a href="https://developer.marvel.com/" target="_blank" aria-label="Marvel API Website"><span>Marvel©
+                </span></a> API</p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/katya-pankov" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

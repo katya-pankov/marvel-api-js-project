@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* main colors */
+    --color-primary: #0c0c14;
+    --color-secondary: #f2b163;
+    --color-marvel-red: #f23c27;
+    --font-white: #fff;
+    --font-dark: #020d18; 
+    /* font sizes */
+    --font-size-18px: 1.2rem;
+    --font-size-26px: 1.6rem;
+  }
+
+body {
+    font-family: 'Marvel', sans-serif;
+    background: var(--color-primary);
+    color: var(--font-white);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10pt;
+   }
+
+  a {
+    color: var(--font-white);
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .active {
+    color: var(--color-secondary);
+    font-weight: 700;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+
+/* Header */
+.main-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.main-header ul {
+  display: flex;
+}
+  
+.main-header ul li {
+  margin-right: 20px;
+}
+  
+.main-header ul li a {
+  font-size: var(--font-size-26px);
+}
+  
+.main-header ul li a:hover {
+  color: var(--color-secondary);
+  font-size: var(--font-size-26px);
+}
+
+/* Main Content */
+#results-wrapper h1 {
+  margin-bottom: 20px;
+  }
+
+  .container {
+    max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      .main-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+      }
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+
+/* Card */
+.card {
+    background: #1a323e;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    
+  }
+  
+  .card-body {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+    background: var(--color-marvel-red);
+    color: var(--font-dark);
+  }
+
+
+/* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    background-color: var(--color-secondary);
+    color: var(--font-dark);
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: var(--font-size-18px);
+    font-family: 'Marvel', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: var(--color-marvel-red);
+    color: var(--font-white);
+    transform: scale(1.1);
+}
+
+/* Spinner container */
+.spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Spinner inner animation */
+.spinner-inner {    
+    border: 16px solid rgba(0, 0, 0, 0.9);
+    border-top: 16px solid #f2b163;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Spinner logo */
+.spinner-logo {
+    margin-bottom: 30px;
+    width: 160px; 
+    height: auto;
+}
+/* Loading text */
+.spinner p {
+    margin-top: 10px;
+    font-size: var(--font-size-26px);
+    font-family: 'Marvel', sans-serif; 
+    color: var(--color-marvel-red); 
+}
+
+/* Footer */
+.main-footer {
+    padding: 20px 0;
+    margin-top: 20px;
+    font-size: var(--font-size-18px);
+  }
+
+  .main-footer span {
+    color: var(--color-marvel-red);
+  }
+  
+  .main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social-links a i {
+    color: (--font-white); 
+    transition: color 0.3s ease; 
+  }
+  
+  .social-links a:hover i {
+    color: var(--color-marvel-red); 
+  }
+
+  #error-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 1);
+    text-align: center;
+    padding: 20px;
+    font-size: var(--font-size-26px); 
+    display: none;
+  }
+  

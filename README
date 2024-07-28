@@ -1,0 +1,55 @@
+# Marvel API JS Project
+
+This project displays Marvel characters and comics using the Marvel API. It includes pagination, a loading spinner, and error handling.
+
+## Features
+
+- Fetch and display a list of Marvel characters.
+- Fetch and display a list of Marvel comics.
+- Pagination for browsing through multiple pages of characters and comics.
+- Loading spinner shown during API requests.
+- Error handling with a message display.
+- Responsive design.
+- Navigation with active link highlighting.
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Marvel API
+- CryptoJS (for generating the hash)
+
+
+### Instructions for running the page
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/katya-pankov/marvel-api-js-project.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd marvel-api-js-project
+    ```
+3. Open `index.html` in your web browser or use a live server to preview the project.
+
+### Optional
+
+1. Replace the public and private keys in `script.js` with your own Marvel API keys:
+    ```javascript
+    const publicKey = 'your-public-key';
+    const privateKey = 'your-private-key';
+    ```
+
+
+- Open `index.html` to view Marvel characters.
+- Open `comics.html` to view Marvel comics.
+- Use the pagination buttons to navigate through multiple pages of characters and comics.
+
+## Author
+
+- [Katya Pankov](https://github.com/katya-pankov)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
